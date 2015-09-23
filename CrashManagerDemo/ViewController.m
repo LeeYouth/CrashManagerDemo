@@ -23,7 +23,7 @@
     if ([crashManager isCrashLog]) {//Crash日志
         
         NSString *crashString = [crashManager crashLogContent];//Crash日志内容
-        NSLog(@"crashString = %@",crashString);
+        
     }
     
     [crashManager clearCrashLog];//清除Crash日志
