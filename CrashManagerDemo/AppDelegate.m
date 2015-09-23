@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "CrashManager.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    //注册消息处理函数的处理方法,处理崩溃信息,写入本地
+    NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
+
     return YES;
 }
 

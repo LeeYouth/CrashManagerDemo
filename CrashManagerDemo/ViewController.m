@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "CrashManager.h"
 
 @interface ViewController ()
 
@@ -16,7 +17,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    CrashManager *crashManager = [CrashManager defaultManager];
+    
+    if ([crashManager isCrashLog]) {//Crash日志
+        
+        NSString *crashString = [crashManager crashLogContent];//Crash日志内容
+        
+    }
+    
+    [crashManager clearCrashLog];//清除Crash日志
+
+    
 }
 
 - (void)didReceiveMemoryWarning {

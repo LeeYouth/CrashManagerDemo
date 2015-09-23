@@ -14,6 +14,8 @@
 		E681EF841BB2A36D00C27A33 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E681EF831BB2A36D00C27A33 /* Images.xcassets */; };
 		E681EF871BB2A36D00C27A33 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E681EF851BB2A36D00C27A33 /* LaunchScreen.xib */; };
 		E681EF931BB2A36D00C27A33 /* CrashManagerDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E681EF921BB2A36D00C27A33 /* CrashManagerDemoTests.m */; };
+		E681EF9F1BB2A3A000C27A33 /* CrashManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E681EF9E1BB2A3A000C27A33 /* CrashManager.m */; };
+		E681EFA21BB2A3E900C27A33 /* AppTools.m in Sources */ = {isa = PBXBuildFile; fileRef = E681EFA11BB2A3E900C27A33 /* AppTools.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,10 @@
 		E681EF8C1BB2A36D00C27A33 /* CrashManagerDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrashManagerDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E681EF911BB2A36D00C27A33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E681EF921BB2A36D00C27A33 /* CrashManagerDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CrashManagerDemoTests.m; sourceTree = "<group>"; };
+		E681EF9D1BB2A3A000C27A33 /* CrashManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrashManager.h; sourceTree = "<group>"; };
+		E681EF9E1BB2A3A000C27A33 /* CrashManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrashManager.m; sourceTree = "<group>"; };
+		E681EFA01BB2A3E900C27A33 /* AppTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppTools.h; sourceTree = "<group>"; };
+		E681EFA11BB2A3E900C27A33 /* AppTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppTools.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +87,7 @@
 		E681EF751BB2A36D00C27A33 /* CrashManagerDemo */ = {
 			isa = PBXGroup;
 			children = (
+				E681EF9C1BB2A3A000C27A33 /* CrashManager */,
 				E681EF7A1BB2A36D00C27A33 /* AppDelegate.h */,
 				E681EF7B1BB2A36D00C27A33 /* AppDelegate.m */,
 				E681EF7D1BB2A36D00C27A33 /* ViewController.h */,
@@ -117,6 +124,17 @@
 				E681EF911BB2A36D00C27A33 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E681EF9C1BB2A3A000C27A33 /* CrashManager */ = {
+			isa = PBXGroup;
+			children = (
+				E681EF9D1BB2A3A000C27A33 /* CrashManager.h */,
+				E681EF9E1BB2A3A000C27A33 /* CrashManager.m */,
+				E681EFA01BB2A3E900C27A33 /* AppTools.h */,
+				E681EFA11BB2A3E900C27A33 /* AppTools.m */,
+			);
+			path = CrashManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,6 +238,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E681EF7F1BB2A36D00C27A33 /* ViewController.m in Sources */,
+				E681EF9F1BB2A3A000C27A33 /* CrashManager.m in Sources */,
+				E681EFA21BB2A3E900C27A33 /* AppTools.m in Sources */,
 				E681EF7C1BB2A36D00C27A33 /* AppDelegate.m in Sources */,
 				E681EF791BB2A36D00C27A33 /* main.m in Sources */,
 			);
