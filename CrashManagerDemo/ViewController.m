@@ -20,7 +20,6 @@
     
     
     
-    //
     CrashManager *crashManager = [CrashManager defaultManager];
     
     if ([crashManager isCrashLog]) {//Crash日志
