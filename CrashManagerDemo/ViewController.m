@@ -28,10 +28,31 @@
         NSLog(@"crashString = %@",crashString);//
     }
     
-    [crashManager clearCrashLog];//清除Crash日志
+//    [crashManager clearCrashLog];//清除Crash日志
 
     
+    //Crash测试
+    UIButton *crashBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    crashBtn.frame = CGRectMake(self.view.frame.size.width/2 - 50, 200, 100, 40);
+    crashBtn.backgroundColor = [UIColor redColor];
+    [crashBtn addTarget:self action:@selector(crashTest) forControlEvents:UIControlEventTouchUpInside];
+    [crashBtn setTitle:@"Crash" forState:UIControlStateNormal];
+    [crashBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [self.view addSubview:crashBtn];
+    
 }
+
+-(void)crashTest{
+    
+    NSString *crashString = nil;
+    NSDictionary *params = [NSDictionary dictionary];
+    params = @{@"crashTest":crashString,
+               };
+}
+
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
