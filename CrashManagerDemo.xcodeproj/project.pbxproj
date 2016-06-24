@@ -15,7 +15,6 @@
 		E681EF871BB2A36D00C27A33 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E681EF851BB2A36D00C27A33 /* LaunchScreen.xib */; };
 		E681EF931BB2A36D00C27A33 /* CrashManagerDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E681EF921BB2A36D00C27A33 /* CrashManagerDemoTests.m */; };
 		E681EF9F1BB2A3A000C27A33 /* CrashManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E681EF9E1BB2A3A000C27A33 /* CrashManager.m */; };
-		E681EFA21BB2A3E900C27A33 /* AppTools.m in Sources */ = {isa = PBXBuildFile; fileRef = E681EFA11BB2A3E900C27A33 /* AppTools.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,8 +43,6 @@
 		E681EF921BB2A36D00C27A33 /* CrashManagerDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CrashManagerDemoTests.m; sourceTree = "<group>"; };
 		E681EF9D1BB2A3A000C27A33 /* CrashManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrashManager.h; sourceTree = "<group>"; };
 		E681EF9E1BB2A3A000C27A33 /* CrashManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrashManager.m; sourceTree = "<group>"; };
-		E681EFA01BB2A3E900C27A33 /* AppTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppTools.h; sourceTree = "<group>"; };
-		E681EFA11BB2A3E900C27A33 /* AppTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppTools.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,8 +128,6 @@
 			children = (
 				E681EF9D1BB2A3A000C27A33 /* CrashManager.h */,
 				E681EF9E1BB2A3A000C27A33 /* CrashManager.m */,
-				E681EFA01BB2A3E900C27A33 /* AppTools.h */,
-				E681EFA11BB2A3E900C27A33 /* AppTools.m */,
 			);
 			path = CrashManager;
 			sourceTree = "<group>";
@@ -239,7 +234,6 @@
 			files = (
 				E681EF7F1BB2A36D00C27A33 /* ViewController.m in Sources */,
 				E681EF9F1BB2A3A000C27A33 /* CrashManager.m in Sources */,
-				E681EFA21BB2A3E900C27A33 /* AppTools.m in Sources */,
 				E681EF7C1BB2A36D00C27A33 /* AppDelegate.m in Sources */,
 				E681EF791BB2A36D00C27A33 /* main.m in Sources */,
 			);
@@ -438,6 +432,7 @@
 				E681EF981BB2A36D00C27A33 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E681EF991BB2A36D00C27A33 /* Build configuration list for PBXNativeTarget "CrashManagerDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -446,6 +441,7 @@
 				E681EF9B1BB2A36D00C27A33 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

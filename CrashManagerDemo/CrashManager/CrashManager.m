@@ -7,7 +7,7 @@
 //
 
 #import "CrashManager.h"
-#import "AppTools.h"
+
 #define LocalCrashLogPath [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:@"/microFinanceCrashError.txt"]
 
 static CrashManager *crashManager = nil;
@@ -62,7 +62,7 @@ void uncaughtExceptionHandler(NSException *exception)
 -(BOOL)isCrashLog{
     NSError *error;
     NSString *textFileContents = [NSString stringWithContentsOfFile:LocalCrashLogPath encoding:NSUTF8StringEncoding error:&error];
-    if ([AppTools checkConvertNull:textFileContents]) {//无log日志
+    if ([self checkConvertNull:textFileContents]) {//无log日志
         return NO;
     }else{
         return YES;
@@ -74,14 +74,22 @@ void uncaughtExceptionHandler(NSException *exception)
 -(NSString *)crashLogContent{
     NSError *error;
     NSString *textFileContents = [NSString stringWithContentsOfFile:LocalCrashLogPath encoding:NSUTF8StringEncoding error:&error];
-    if ([AppTools checkConvertNull:textFileContents]) {//无log日志
+    if ([self checkConvertNull:textFileContents]) {//无log日志
         return @"";
     }else{
         return textFileContents;
     }
 }
 
-
+#pragma mark - 检查是否有空字符
+- (BOOL)checkConvertNull:(NSString *)object
+{
+    if ([object isEqual:[NSNull null]] || [object isKindOfClass:[NSNull class]] ||object==nil || [object isEqualToString:@""]) {
+        return YES;
+    }else{
+        return NO;
+    }
+}
 
 
 @end
