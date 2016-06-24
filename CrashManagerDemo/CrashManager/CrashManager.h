@@ -13,15 +13,15 @@
 /** 捕捉Crash */
 void uncaughtExceptionHandler(NSException *exception);
 
-+(id)defaultManager;//单例
++ (id)defaultManager;//单例
 
 /** 移除Crash的log日志 */
--(void)clearCrashLog;
+- (void)clearCrashLog;
 
 /** 是否有log日志 */
--(BOOL)isCrashLog;
+- (BOOL)isCrashLog;
 
 /** crash log日志 */
--(NSString *)crashLogContent;
+- (NSString *)crashLogContent;
 
 @end

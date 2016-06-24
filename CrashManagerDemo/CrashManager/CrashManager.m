@@ -15,9 +15,7 @@ static CrashManager *crashManager = nil;
 @implementation CrashManager
 
 #pragma mark - 捕捉Crash
-void uncaughtExceptionHandler(NSException *exception)
-
-{
+void uncaughtExceptionHandler(NSException *exception){
     // 异常的堆栈信息
     NSArray *stackArray = [exception callStackSymbols];
     
@@ -40,8 +38,7 @@ void uncaughtExceptionHandler(NSException *exception)
     
 }
 
-+ (id)defaultManager
-{
++ (id)defaultManager{
     @synchronized(self){
         static dispatch_once_t pred;
         dispatch_once(&pred, ^{
@@ -53,13 +50,13 @@ void uncaughtExceptionHandler(NSException *exception)
 
 
 #pragma mark -移除Crash的log日志
--(void)clearCrashLog{
+- (void)clearCrashLog{
     NSFileManager *fileManager = [[NSFileManager alloc]init];
     [fileManager removeItemAtPath:LocalCrashLogPath error:nil];
 }
 
 #pragma mark - 是否有log日志
--(BOOL)isCrashLog{
+- (BOOL)isCrashLog{
     NSError *error;
     NSString *textFileContents = [NSString stringWithContentsOfFile:LocalCrashLogPath encoding:NSUTF8StringEncoding error:&error];
     if ([self checkConvertNull:textFileContents]) {//无log日志
@@ -71,7 +68,7 @@ void uncaughtExceptionHandler(NSException *exception)
 
 
 #pragma mark -crash log日志
--(NSString *)crashLogContent{
+- (NSString *)crashLogContent{
     NSError *error;
     NSString *textFileContents = [NSString stringWithContentsOfFile:LocalCrashLogPath encoding:NSUTF8StringEncoding error:&error];
     if ([self checkConvertNull:textFileContents]) {//无log日志
@@ -82,8 +79,7 @@ void uncaughtExceptionHandler(NSException *exception)
 }
 
 #pragma mark - 检查是否有空字符
-- (BOOL)checkConvertNull:(NSString *)object
-{
+- (BOOL)checkConvertNull:(NSString *)object{
     if ([object isEqual:[NSNull null]] || [object isKindOfClass:[NSNull class]] ||object==nil || [object isEqualToString:@""]) {
         return YES;
     }else{
